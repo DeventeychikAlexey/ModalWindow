@@ -1,0 +1,89 @@
+.a-modal {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.a-modal.open,
+.a-modal.hide {
+  opacity: 1;
+  visibility: visible;
+}
+
+.a-modal.open .a-modal__body {
+  transform: translate(0);
+}
+
+.a-modal.open .a-modal__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.a-modal.hide .a-modal__overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.a-modal.hide .a-modal__body {
+  transform: translate(0, -100%);
+}
+
+.a-modal__overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in;
+}
+
+.a-modal__body {
+  padding: 20px;
+  margin: 150px auto;
+  background-color: #fff;
+  /* width: 600px; */
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  transform: translate(0, -100%);
+}
+
+.a-modal__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.a-modal__close {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.a-modal__content {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.a-modal__content p {
+  margin-bottom: 5px;
+}
+
+.a-modal__footer {
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.a-modal__footer button {
+  margin: 0 5px;
+  text-transform: capitalize;
+}
+
+.card-img-top {
+  max-height: 250px !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
